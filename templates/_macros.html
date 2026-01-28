@@ -1,0 +1,17 @@
+{%macro datos(name, placeholder, type="text")%}
+<div class="mb-3">
+            <label for="{{name}}" class="form-lable"></label>
+            <input type="{{type}}" class="form-control" name="{{name}}" id="{{name}}"
+            placeholder="{{placeholder}}">
+        </div>
+{%endmacro%}
+
+{%macro campoNuevo(fiel)%}
+<td>{{fiel.label}}</td>
+<dd>{{fiel(**kwargs) | safe }}</dd>
+{% if fiel.errors %}
+    {%for error in fiel.errors%}
+        <li style="color: red;">{{error}}</li>
+    {%endfor%}
+{% endif %}
+{%endmacro%}

@@ -2,16 +2,16 @@
 
 {% block content %}
 
-    <form action="/resultado" method="post">
+    <form action="/operasBas" method="post">
         <div class="mb-3">
-            <label for="n1" class="from-lable">Numero1</label>
-            <input type="text" class="from-control" name="n1" id="1">
+            <label for="n1" class="form-lable">Numero1</label>
+            <input type="text" class="form-control" name="n1" id="1">
         </div>
          <div class="mb-3">
-            <label for="n2" class="from-lable">Numero2</label>
-            <input type="text" class="from-control" name="n2" id="2">
+            <label for="n2" class="form-lable">Numero2</label>
+            <input type="text" class="form-control" name="n2" id="2">
         </div>
     <button class="btn btn-primary" type="submit">Calcular</button>
     </form>
-
+    <h1>La suma es {{res}}</h1>
 {% endblock %}
